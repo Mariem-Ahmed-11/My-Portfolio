@@ -5,7 +5,7 @@ import ProjectModal from "./ProjectModal";
 const ProjectCard = ({ project, onSelect }: { project: any, onSelect: (p: Project) => void }) => {
   if (project.isPlaceholder) {
     return (
-      <div className="relative rounded-[20px] border border-dashed border-primary/30 overflow-hidden flex items-center justify-center w-[300px] md:w-[400px] aspect-[3/2] bg-primary/5 flex-shrink-0">
+      <div className="relative rounded-[20px] border border-dashed border-primary/30 overflow-hidden flex items-center justify-center w-[300px] md:w-[400px] aspect-[3/2] bg-primary/5 flex-shrink-0 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_8px_30px_hsla(25,95%,53%,0.15)] hover:border-primary/60">
         <div className="text-center">
           <span className="text-2xl font-black gradient-text">Coming Soon</span>
           <p className="text-xs text-muted-foreground mt-2">More projects on the way</p>
@@ -16,12 +16,12 @@ const ProjectCard = ({ project, onSelect }: { project: any, onSelect: (p: Projec
 
   return (
     <div
-      className="project-card relative rounded-[20px] border border-border overflow-hidden cursor-pointer group flex-shrink-0 w-[300px] md:w-[400px]"
+      className="project-card relative rounded-[20px] border border-border overflow-hidden cursor-pointer group flex-shrink-0 w-[300px] md:w-[400px] shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-2 hover:border-primary/50"
     >
       <img
         src={project.images[0]}
         alt={project.title}
-        className="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-110"
+        className="w-full aspect-[3/2] object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
       />
       {/* Overlay */}
       <div className="project-overlay absolute inset-0 glass flex flex-col items-center justify-center text-center p-6 gap-4">

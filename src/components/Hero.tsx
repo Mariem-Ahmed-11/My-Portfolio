@@ -8,7 +8,7 @@ const socialLinks = [
 ];
 
 const titles = [
-  "Software Engineering Student",
+  "Frontend Developer | Student",
   "React Developer",
   "UI/UX Enthusiast",
   "Vibe Engineer",

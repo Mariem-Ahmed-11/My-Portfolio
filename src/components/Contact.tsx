@@ -48,18 +48,20 @@ const Contact = () => {
 
     // Simulate API call or use a service like FormSubmit
     try {
-      // Using FormSubmit.co for actual email delivery
-      const response = await fetch("https://formsubmit.co/ajax/mariem15ahmed222@gmail.com", {
+      // Using Web3Forms for actual email delivery
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
         body: JSON.stringify({
+          access_key: "27844d83-317d-4d83-981c-efbe96fd2018",
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _subject: "New Portfolio Message"
+          subject: "New Message from " + formData.name,
+          from_name: "Portfolio Contact"
         })
       });
 
