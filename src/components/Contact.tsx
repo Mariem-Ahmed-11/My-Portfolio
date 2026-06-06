@@ -117,7 +117,7 @@ const Contact = () => {
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="mailto:mariem15ahmed222@gmail.com"
+                  href="mailto:mariem.salah.dev@gmail.com"
                   className="w-12 h-12 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300 group"
                   aria-label="Email"
                 >

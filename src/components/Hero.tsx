@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { Github, Youtube, Linkedin } from "lucide-react";
+import { Github, Youtube, Linkedin, Mail } from "lucide-react";
 import characterImg from "@/assets/character.png";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/Mariem-Ahmed-11", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/mariem-ahmed-salah-47219139b", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:mariem.salah.dev@gmail.com", label: "Email" },
 ];
 
 const titles = [

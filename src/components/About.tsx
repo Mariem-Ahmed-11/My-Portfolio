@@ -3,11 +3,13 @@ import standingImg from "@/assets/standing.png";
 import talkingImg from "@/assets/talking.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import { projects } from "@/data/projects";
+import skills from "@/data/skills";
 
 const stats = [
-  { value: "3+", label: "Projects Shipped" },
-  { value: "12+", label: "Technologies" },
-  { value: "1", label: "Research Paper" },
+  { value: `${projects.length}+`, label: "Projects" },
+  { value: `${skills.length}+`, label: "Technologies" },
+  { value: "2+", label: "Years Learning" },
 ];
 
 const About = () => {
@@ -81,20 +83,20 @@ const About = () => {
         <div className="space-y-6 reveal">
           <div>
             <h2 className="text-3xl md:text-4xl font-black text-foreground">
-              About <span className="gradient-text">Me</span>
+              About <span className="gradient-text">Mariem</span>
             </h2>
           </div>
 
           <p className="text-muted-foreground text-sm leading-relaxed">
-            I'm Mariem Ahmed, a Software Engineering student at We School of Applied Technology. I don't wait until I'm "ready" — I ship under pressure and learn whatever technology is needed along the way. From NFC attendance systems to electromagnetic healing devices, every project I've built involved tech I'd never touched before starting.
+            I'm Mariem Ahmed, a Software Engineering student at We School of Applied Technology. I build production-ready web applications and hardware-integrated solutions with an emphasis on robustness, usability, and measurable value. My work spans frontend engineering, embedded systems, and data-driven interfaces.
           </p>
 
           <p className="text-muted-foreground text-sm leading-relaxed">
-            I'm a vibe engineer — I understand the architecture, make deliberate decisions, and use AI as a precision tool, not a replacement for thinking.
+            I combine engineering fundamentals with practical product thinking: clean, maintainable code; thoughtful UX; and reliable integrations. I use AI tools to accelerate development while keeping human judgment and quality control central to every decision.
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 pt-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <span className="text-2xl md:text-3xl font-black gradient-text">{stat.value}</span>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const Navbar = () => {
   const location = useLocation();
@@ -20,6 +20,8 @@ const Navbar = () => {
     } else if (id === "Projects") {
       if (location.pathname === "/projects") window.scrollTo({ top: 0, behavior: "smooth" });
       else navigate("/projects");
+    } else if (id === "Skills") {
+      navigate("/skills");
     } else if (isHome) {
       if (id === "Home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -40,7 +42,7 @@ const Navbar = () => {
   return (
     <nav className="w-full py-6 px-6 md:px-12 flex items-center justify-between relative z-50">
       <Link to="/" className="text-xl font-black gradient-text tracking-tight hover:opacity-80 transition-opacity">
-        Portfolio
+        mariem.dev
       </Link>
       <div className="flex items-center gap-4 md:gap-8">
         <div className="hidden md:flex items-center gap-6">
@@ -62,6 +64,15 @@ const Navbar = () => {
           >
             Hire Me
           </button>
+          <a
+            href="/Mariem_Ahmed_Salah_CV.pdf"
+            download="Mariem_Ahmed_Salah_CV.pdf"
+            className="ml-2 hidden sm:inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium border border-transparent transition-colors hover:bg-orange-500 hover:text-white"
+            aria-label="Download CV"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            CV
+          </a>
           
           <button 
             className="md:hidden p-2 text-foreground"
@@ -90,6 +101,15 @@ const Navbar = () => {
           >
             Hire Me
           </button>
+          <a
+            href="/Mariem_Ahmed_Salah_CV.pdf"
+            download="Mariem_Ahmed_Salah_CV.pdf"
+            className="w-full text-center flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-medium border border-transparent hover:bg-orange-500 hover:text-white"
+            aria-label="Download CV"
+          >
+            <Download className="w-4 h-4" />
+            CV
+          </a>
         </div>
       )}
     </nav>

@@ -24,12 +24,12 @@ const ProjectCard = ({ project, onSelect }: { project: any, onSelect: (p: Projec
         className="w-full aspect-[3/2] object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
       />
       {/* Overlay */}
-      <div className="project-overlay absolute inset-0 glass flex flex-col items-center justify-center text-center p-6 gap-4">
+      <div className="project-overlay absolute inset-0 glass flex flex-col items-center justify-center text-center p-6 gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <h3 className="text-lg font-bold text-foreground">{project.title}</h3>
         <p className="text-sm text-muted-foreground max-w-xs">{project.shortDesc}</p>
         <button
           onClick={() => onSelect(project)}
-          className="btn-gradient px-5 py-2.5 rounded-lg text-sm font-medium mt-2"
+          className="btn-gradient px-5 py-2.5 rounded-lg text-sm font-medium mt-2 inline-flex items-center gap-2"
         >
           Show Details →
         </button>
@@ -56,13 +56,8 @@ const Projects = () => {
           <div className="fade-edge-right"></div>
           
           <div className="scroll-content">
-            {/* First set of projects */}
             {allProjects.map((project, index) => (
-              <ProjectCard key={`first-${project.id}-${index}`} project={project} onSelect={setSelected} />
-            ))}
-            {/* Second set for seamless loop */}
-            {allProjects.map((project, index) => (
-              <ProjectCard key={`second-${project.id}-${index}`} project={project} onSelect={setSelected} />
+              <ProjectCard key={`${project.id}-${index}`} project={project} onSelect={setSelected} />
             ))}
           </div>
         </div>

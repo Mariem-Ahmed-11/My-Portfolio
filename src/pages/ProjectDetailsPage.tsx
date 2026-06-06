@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import BackToTop from "@/components/BackToTop";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ArrowLeft, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const ProjectDetailsPage = () => {
   const { id } = useParams();
@@ -189,17 +190,7 @@ const ProjectDetailsPage = () => {
           )}
         </main>
 
-        <footer className="relative z-10 text-center py-12 border-t border-border mt-20">
-          <div className="max-w-4xl mx-auto px-6">
-            <h3 className="text-xl font-bold mb-2">
-              <span className="gradient-text">Mariem Ahmed</span>
-            </h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Software Engineering Student · We School of Applied Technology · Cairo
-            </p>
-            <Link to="/" className="text-xs text-primary hover:underline">Back to Landing Page</Link>
-          </div>
-        </footer>
+        <Footer />
       </div>
 
       <BackToTop />

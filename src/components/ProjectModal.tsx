@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
+import { Github, ExternalLink } from "lucide-react";
 import type { Project } from "@/data/projects";
 
 interface Props {
@@ -168,13 +169,26 @@ const ProjectModal = ({ project, onClose }: Props) => {
             </div>
           )}
 
-          {/* Full Page Button */}
-          <div className="pt-6 border-t border-border flex justify-end">
+          {/* Action Buttons */}
+          <div className="pt-6 border-t border-border flex flex-wrap gap-3 justify-end">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 btn-ghost px-4 py-2 rounded-lg text-sm"
+              >
+                <Github className="w-4 h-4" />
+                Open Repo
+              </a>
+            )}
+
             <Link
               to={`/projects/${project.id}`}
               onClick={onClose}
               className="btn-gradient px-6 py-3 rounded-xl text-sm font-bold flex items-center gap-2 hover:scale-105 transition-transform"
             >
+              <ExternalLink className="w-4 h-4" />
               View Full Page →
             </Link>
           </div>
