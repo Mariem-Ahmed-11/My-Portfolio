@@ -41,7 +41,9 @@ const ProjectCard = ({ project, onSelect }: { project: any, onSelect: (p: Projec
 const Projects = () => {
   const [selected, setSelected] = useState<Project | null>(null);
 
-  const allProjects = [...projects, { id: 'placeholder', isPlaceholder: true }];
+  // show newest projects first so recently added projects (like E-commerce Dashboard) appear in the slider
+  const sorted = [...projects].slice().sort((a, b) => Number((b as any).id) - Number((a as any).id));
+  const allProjects = [...sorted, { id: 'placeholder', isPlaceholder: true }];
 
   return (
     <>

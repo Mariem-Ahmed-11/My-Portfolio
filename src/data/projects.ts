@@ -187,5 +187,29 @@ export const projects: Project[] = [
     images: ["/Food_lover_js.png"],
     liveUrl: "https://food-lovar-js.netlify.app/",
   },
+  {
+    id: 9,
+    title: "E-commerce Dashboard",
+    type: "Web · Dashboard",
+    shortDesc: "Admin dashboard for monitoring e-commerce metrics and orders",
+    techIcons: [
+      { name: "TypeScript", devicon: "typescript" },
+      { name: "React", devicon: "react" },
+      { name: "CSS", devicon: "css3" },
+    ],
+    overview: "A TypeScript + React dashboard for visualizing e-commerce data, orders, and product metrics. Built as a Vite app with a focus on clear data presentation.",
+    built: [
+      "Real-time orders & sales summary",
+      "Interactive charts and tables",
+      "Responsive admin layout",
+    ],
+    challenges: [
+      "Designing usable admin UI components",
+      "Handling responsive data-heavy layouts",
+    ],
+    takeaway: "Strengthened frontend architecture and TypeScript usage for building maintainable dashboards.",
+    images: ["/E-commerce-Dashboard.png"],
+    liveUrl: "https://github.com/Mariem-Ahmed-11/E-commerce-Dashboard",
+  },
  
 ];
