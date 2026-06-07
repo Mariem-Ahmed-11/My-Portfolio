@@ -47,7 +47,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/mariem-ahmed-salah-47219139b" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="/Mariem_Ahmed_Salah_CV.pdf" download="Mariem_Ahmed_Salah_CV.pdf" aria-label="Download CV" className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2">
+              <a href="/Mariem_Ahmed_Salah_CV_ATS.pdf" download="Mariem_Ahmed_Salah_CV_ATS.pdf" aria-label="Download CV" className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2">
                 <Download className="w-5 h-5" />
                 <span className="text-sm">CV</span>
               </a>

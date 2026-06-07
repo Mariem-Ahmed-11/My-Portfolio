@@ -65,8 +65,8 @@ const Navbar = () => {
             Hire Me
           </button>
           <a
-            href="/Mariem_Ahmed_Salah_CV.pdf"
-            download="Mariem_Ahmed_Salah_CV.pdf"
+            href="/Mariem_Ahmed_Salah_CV_ATS.pdf"
+            download="Mariem_Ahmed_Salah_CV_ATS.pdf"
             className="ml-2 hidden sm:inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium border border-transparent transition-colors hover:bg-orange-500 hover:text-white"
             aria-label="Download CV"
           >
@@ -102,8 +102,8 @@ const Navbar = () => {
             Hire Me
           </button>
           <a
-            href="/Mariem_Ahmed_Salah_CV.pdf"
-            download="Mariem_Ahmed_Salah_CV.pdf"
+            href="/Mariem_Ahmed_Salah_CV_ATS.pdf"
+            download="Mariem_Ahmed_Salah_CV_ATS.pdf"
             className="w-full text-center flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-medium border border-transparent hover:bg-orange-500 hover:text-white"
             aria-label="Download CV"
           >
