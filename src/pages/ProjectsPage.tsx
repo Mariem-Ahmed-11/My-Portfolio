@@ -47,12 +47,25 @@ const ProjectsPage = () => {
                     <p className="text-sm text-muted-foreground mt-2">{project.shortDesc}</p>
                     <div className="mt-4 flex items-center gap-3">
                       <button onClick={() => setSelected(project)} className="inline-flex items-center gap-2 btn-gradient px-3 py-2 rounded-md text-sm">
-                        <ExternalLink className="w-4 h-4" /> View
+                        <ExternalLink className="w-4 h-4" />
+                        View
                       </button>
-                      {project.liveUrl && (
-                        <a href={project.liveUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 btn-ghost px-3 py-2 rounded-md text-sm">
-                          <Github className="w-4 h-4" /> Repo
+
+                      {project.repoUrl ? (
+                        <a
+                          href={project.repoUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-9 h-9 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:scale-105 transition-transform"
+                          title="View Repo"
+                          aria-label={`View ${project.title} repo`}
+                        >
+                          <Github className="w-4 h-4" />
                         </a>
+                      ) : (
+                        <div className="w-9 h-9 rounded-full glass flex items-center justify-center text-muted-foreground/40 opacity-40">
+                          <Github className="w-4 h-4" />
+                        </div>
                       )}
                     </div>
                   </div>

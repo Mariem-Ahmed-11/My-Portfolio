@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Github } from "lucide-react";
 import { projects, type Project } from "@/data/projects";
 import ProjectModal from "./ProjectModal";
 
@@ -27,12 +28,32 @@ const ProjectCard = ({ project, onSelect }: { project: any, onSelect: (p: Projec
       <div className="project-overlay absolute inset-0 glass flex flex-col items-center justify-center text-center p-6 gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <h3 className="text-lg font-bold text-foreground">{project.title}</h3>
         <p className="text-sm text-muted-foreground max-w-xs">{project.shortDesc}</p>
-        <button
-          onClick={() => onSelect(project)}
-          className="btn-gradient px-5 py-2.5 rounded-lg text-sm font-medium mt-2 inline-flex items-center gap-2"
-        >
-          Show Details →
-        </button>
+        <div className="mt-4 flex items-center justify-center gap-3">
+          <button
+            onClick={() => onSelect(project)}
+            className="btn-gradient px-4 py-2 rounded-lg text-sm font-medium inline-flex items-center gap-2"
+          >
+            <ExternalLink className="w-4 h-4" />
+            Show Details
+          </button>
+
+          {project.repoUrl ? (
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="w-9 h-9 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:scale-105 transition-transform"
+              title="View Repo"
+              aria-label={`View ${project.title} repo`}
+            >
+              <Github className="w-4 h-4" />
+            </a>
+          ) : (
+            <div className="w-9 h-9 rounded-full glass flex items-center justify-center text-muted-foreground/40 opacity-40">
+              <Github className="w-4 h-4" />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

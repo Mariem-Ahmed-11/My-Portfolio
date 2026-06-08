@@ -26,6 +26,7 @@ export interface Project {
   takeaway: string;
   images: string[];
   liveUrl?: string;
+  repoUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -54,6 +55,7 @@ export const projects: Project[] = [
     takeaway: "Learned React, Next.js, and Firebase integration under real project pressure. Proved she can pick up any technology on the fly when there's a real problem to solve.",
     images: [nfcImg, nfc1, nfc2, nfc3, nfc4],
     liveUrl: "https://we-nfc.netlify.app",
+    repoUrl: "https://github.com/Mariem-Ahmed-11/NFC",
   },
   {
     id: 2,
@@ -80,6 +82,7 @@ export const projects: Project[] = [
     takeaway: "Reinforced React and Next.js skills in a collaborative, multi-feature platform with actual users.",
     images: [compImg, comp1, comp2, comp3, comp4, comp5],
     liveUrl: "https://competition11.netlify.app",
+    repoUrl: "https://github.com/Mariem-Ahmed-11/pass-to-access",
   },
   {
     id: 3,
@@ -120,7 +123,7 @@ export const projects: Project[] = [
     challenges: ["Pixel-perfect layout", "Responsive images"],
     takeaway: "Improved responsive layout and attention to visual detail.",
     images: ["/jamaly.png"],
-    liveUrl: "https://github.com/Mariem-Ahmed-11/jamaly-beauty",
+    repoUrl: "https://github.com/Mariem-Ahmed-11/jamaly-beauty",
   },
   {
     id: 5,
@@ -136,7 +139,8 @@ export const projects: Project[] = [
     challenges: ["Learning layout techniques"],
     takeaway: "Foundation in building static sites.",
     images: ["/Frist_project.png"],
-    liveUrl: "https://first-projecth.netlify.app/",
+    liveUrl: "https://first-project-o.netlify.app/",
+    repoUrl: "https://github.com/Mariem-Ahmed-11/first-project",
   },
   {
     id: 6,
@@ -153,7 +157,8 @@ export const projects: Project[] = [
     challenges: ["Visual polish and spacing"],
     takeaway: "Stronger UI composition skills.",
     images: ["/Luxury.png"],
-    liveUrl: "https://luxury-l.netlify.app/",
+    liveUrl: "https://luxury-o.netlify.app/",
+    repoUrl: "https://github.com/Mariem-Ahmed-11/Luxury",
   },
   {
     id: 7,
@@ -169,7 +174,8 @@ export const projects: Project[] = [
     challenges: ["Balancing content and whitespace"],
     takeaway: "Better layout hierarchy skills.",
     images: ["/Appexy.png"],
-    liveUrl: "https://appexy-a.netlify.app/",
+    liveUrl: "https://appexy-o.netlify.app/",
+    repoUrl: "https://github.com/Mariem-Ahmed-11/Appexy",
   },
   {
     id: 8,
@@ -185,7 +191,8 @@ export const projects: Project[] = [
     challenges: ["DOM manipulation and performance"],
     takeaway: "Solid vanilla JS skills.",
     images: ["/Food_lover_js.png"],
-    liveUrl: "https://food-lovar-js.netlify.app/",
+    liveUrl: "https://food-lovar-jso.netlify.app/",
+    repoUrl: "https://github.com/Mariem-Ahmed-11/Food_lovar_js",
   },
   {
     id: 9,
@@ -209,7 +216,7 @@ export const projects: Project[] = [
     ],
     takeaway: "Strengthened frontend architecture and TypeScript usage for building maintainable dashboards.",
     images: ["/E-commerce-Dashboard.png"],
-    liveUrl: "https://github.com/Mariem-Ahmed-11/E-commerce-Dashboard",
+    repoUrl: "https://github.com/Mariem-Ahmed-11/E-commerce-Dashboard",
   },
  
 ];

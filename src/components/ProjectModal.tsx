@@ -156,7 +156,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
             <p className="text-sm text-muted-foreground leading-relaxed">{project.takeaway}</p>
           </div>
 
-          {/* Live Preview */}
+          {/* Live Preview (only when a live demo URL is provided) */}
           {project.liveUrl && (
             <div className="pt-4">
               <h4 className="text-sm font-bold text-foreground mb-3">Live Preview</h4>
@@ -171,6 +171,25 @@ const ProjectModal = ({ project, onClose }: Props) => {
 
           {/* Action Buttons */}
           <div className="pt-6 border-t border-border flex flex-wrap gap-3 justify-end">
+            {/* Repo button (separate from live demo) */}
+            {project.repoUrl ? (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-foreground hover:scale-105 transition-transform"
+                title="View Repo"
+                aria-label={`View ${project.title} repo`}
+              >
+                <Github className="w-4 h-4" />
+              </a>
+            ) : (
+              <div className="w-9 h-9 rounded-full glass flex items-center justify-center text-muted-foreground/40 opacity-40">
+                <Github className="w-4 h-4" />
+              </div>
+            )}
+
+            {/* If a live demo exists, offer a quick open-in-new-tab button in addition to the embedded preview */}
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
@@ -178,8 +197,8 @@ const ProjectModal = ({ project, onClose }: Props) => {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 btn-ghost px-4 py-2 rounded-lg text-sm"
               >
-                <Github className="w-4 h-4" />
-                Open Repo
+                <ExternalLink className="w-4 h-4" />
+                Open Live
               </a>
             )}
 
@@ -188,6 +207,13 @@ const ProjectModal = ({ project, onClose }: Props) => {
               onClick={onClose}
               className="btn-gradient px-6 py-3 rounded-xl text-sm font-bold flex items-center gap-2 hover:scale-105 transition-transform"
             >
+              {project.repoUrl ? (
+                <a href={project.repoUrl} target="_blank" rel="noreferrer" className="inline-flex items-center">
+                  <Github className="w-4 h-4" />
+                </a>
+              ) : (
+                <Github className="w-4 h-4" />
+              )}
               <ExternalLink className="w-4 h-4" />
               View Full Page →
             </Link>
