@@ -218,5 +218,30 @@ export const projects: Project[] = [
     images: ["/E-commerce-Dashboard.png"],
     repoUrl: "https://github.com/Mariem-Ahmed-11/E-commerce-Dashboard",
   },
+  {
+    id: 10,
+    title: "Study Management System",
+    type: "Web · Platform",
+    shortDesc: "A platform to manage courses, students, and schedules for schools",
+    techIcons: [
+      { name: "React", devicon: "react" },
+      { name: "TypeScript", devicon: "typescript" },
+      { name: "Firebase", devicon: "firebase" },
+    ],
+    overview: "A study management system to manage students, courses, schedules, and grades with role-based access for admins, teachers, and students.",
+    built: [
+      "User management (students, teachers, admins)",
+      "Course and schedule management UI",
+      "Gradebook and simple reporting",
+    ],
+    challenges: [
+      "Designing role-based access and permissions",
+      "Syncing schedules and handling conflicts",
+      "Keeping the UI simple while showing complex data",
+    ],
+    takeaway: "Learned to design multi-role interfaces and data flows for educational platforms with a focus on usability.",
+    images: ["/Study Management System.png"],
+    repoUrl: "https://github.com/Mariem-Ahmed-11/Study-Management-System",
+  },
  
 ];

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { projects, type Project } from "@/data/projects";
 import ProjectModal from "./ProjectModal";
 
